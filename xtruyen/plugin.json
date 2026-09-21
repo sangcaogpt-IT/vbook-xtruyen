@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "name": "XTruyen",
+    "author": "sangcaogpt-IT",
+    "version": 4,
+    "source": "https://xtruyen.vn",
+    "regexp": "https?://(www\\.)?xtruyen\\.vn/truyen/[^/]+/?",
+    "description": "Đọc truyện chữ trên XTruyen.vn",
+    "locale": "vi_VN",
+    "type": "novel"
+  },
+  "script": {
+    "detail": "detail.js",
+    "search": "search.js",
+    "toc": "toc.js",
+    "chap": "chap.js"
+  }
+}
