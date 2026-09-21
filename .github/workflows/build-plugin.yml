@@ -27,4 +27,5 @@ jobs:
           git add xtruyen/plugin.zip xtruyen/icon.png
           git diff --cached --quiet && exit 0
           git commit -m "Build XTruyen VBook plugin v2"
-          git push
+          git pull --rebase origin main
+          git push origin main
