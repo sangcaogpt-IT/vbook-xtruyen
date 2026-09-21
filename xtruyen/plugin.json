@@ -2,7 +2,7 @@
   "metadata": {
     "name": "XTruyen",
     "author": "sangcaogpt-IT",
-    "version": 10,
+    "version": 11,
     "source": "https://xtruyen.vn",
     "regexp": "https?://(www\\.)?xtruyen\\.vn/truyen/[^/]+/?",
     "description": "Đọc truyện chữ trên XTruyen.vn",
