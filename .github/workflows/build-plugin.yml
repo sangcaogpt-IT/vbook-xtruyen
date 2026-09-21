@@ -11,23 +11,33 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: xtruyen-plugin-build
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout latest main
         uses: actions/checkout@v4
-      - name: Build plugin.zip from source
+        with:
+          ref: main
+      - name: Sync latest main
+        run: |
+          git pull --rebase origin main
+      - name: Build clean plugin.zip
         run: |
           rm -f xtruyen/plugin.zip
           cd xtruyen
           zip -r plugin.zip plugin.json icon.png src
+          unzip -l plugin.zip
       - name: Save generated plugin
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add xtruyen/plugin.zip
           git diff --cached --quiet && exit 0
-          git commit -m "Build XTruyen VBook plugin v4"
+          git commit -m "Build XTruyen plugin"
           git pull --rebase origin main
           git push origin main
