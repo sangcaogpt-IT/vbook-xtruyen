@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "author": "sangcaogpt-IT",
+    "description": "VBook extension cho XTruyen"
+  },
+  "data": [
+    {
+      "name": "XTruyen",
+      "author": "sangcaogpt-IT",
+      "path": "https://raw.githubusercontent.com/sangcaogpt-IT/vbook-xtruyen/main/xtruyen/plugin.zip",
+      "version": 1,
+      "source": "https://xtruyen.vn",
+      "icon": "https://raw.githubusercontent.com/sangcaogpt-IT/vbook-xtruyen/main/xtruyen/icon.png",
+      "description": "Đọc truyện chữ trên XTruyen.vn bằng VBook",
+      "type": "novel",
+      "locale": "vi_VN"
+    }
+  ]
+}
