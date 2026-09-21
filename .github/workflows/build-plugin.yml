@@ -39,5 +39,6 @@ jobs:
           git add xtruyen/plugin.zip
           git diff --cached --quiet && exit 0
           git commit -m "Build XTruyen plugin"
-          git pull --rebase origin main
-          git push origin main
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
